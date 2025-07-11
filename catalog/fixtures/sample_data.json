@@ -1,0 +1,133 @@
+[
+  {
+    "model": "catalog.genre",
+    "pk": 1,
+    "fields": {"name": "Science Fiction"}
+  },
+  {
+    "model": "catalog.genre",
+    "pk": 2,
+    "fields": {"name": "Fantasy"}
+  },
+  {
+    "model": "catalog.genre",
+    "pk": 3,
+    "fields": {"name": "Mystery"}
+  },
+
+  {
+    "model": "catalog.author",
+    "pk": 1,
+    "fields": {
+      "first_name": "Isaac",
+      "last_name": "Asimov",
+      "date_of_birth": "1920-01-02",
+      "date_of_death": null
+    }
+  },
+  {
+    "model": "catalog.author",
+    "pk": 2,
+    "fields": {
+      "first_name": "J.K.",
+      "last_name": "Rowling",
+      "date_of_birth": "1965-07-31",
+      "date_of_death": null
+    }
+  },
+  {
+    "model": "catalog.author",
+    "pk": 3,
+    "fields": {
+      "first_name": "Agatha",
+      "last_name": "Christie",
+      "date_of_birth": "1890-09-15",
+      "date_of_death": null
+    }
+  },
+
+  {
+    "model": "catalog.book",
+    "pk": 1,
+    "fields": {
+      "title": "Foundation",
+      "summary": "A science fiction classic.",
+      "isbn": "9780451457998",
+      "author": 1,
+      "genre": [1]
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 2,
+    "fields": {
+      "title": "Harry Potter",
+      "summary": "A young wizard begins his journey.",
+      "isbn": "9780747532699",
+      "author": 2,
+      "genre": [2]
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 3,
+    "fields": {
+      "title": "Murder on the Orient Express",
+      "summary": "Detective novel.",
+      "isbn": "9780062073495",
+      "author": 3,
+      "genre": [3]
+    }
+  },
+
+  {
+    "model": "catalog.bookinstance",
+    "pk": "c0ed26be6e324036b435fd77b6660fdc",
+    "fields": {
+      "book": 1,
+      "imprint": "1st edition",
+      "due_back": "2025-07-24",
+      "status": "a"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": "1338aae5e7dc4c1cac719b3f45d9a346",
+    "fields": {
+      "book": 1,
+      "imprint": "2nd edition",
+      "due_back": "2025-07-19",
+      "status": "o"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": "f321b04654e9491c831057ae66779a9d",
+    "fields": {
+      "book": 2,
+      "imprint": "1st edition",
+      "due_back": null,
+      "status": "m"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": "98a3a89f1689419584fc18eff8c31569",
+    "fields": {
+      "book": 2,
+      "imprint": "3rd edition",
+      "due_back": "2025-07-29",
+      "status": "a"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": "871caf4c31af4050a0fe44e7f8ac2358",
+    "fields": {
+      "book": 3,
+      "imprint": "Limited edition",
+      "due_back": "2025-07-21",
+      "status": "r"
+    }
+  }
+]
