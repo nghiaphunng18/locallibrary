@@ -1,0 +1,32 @@
+# idea
+.idea/
+
+# config env
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Django database (nếu dùng SQLite mặc định)
+db.sqlite3
+
+# Migrations
+**/migrations/
+!*/migrations/__init__.py
+
+# VS Code settings
+.vscode/
+
+# Environment files
+.env
+*.env
+
+# Virtual environment (nếu đặt trong project)
+venv/
+myenv*/
+env/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
