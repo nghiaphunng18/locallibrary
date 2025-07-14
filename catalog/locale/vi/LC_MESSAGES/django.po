@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 15:38+0700\n"
+"POT-Creation-Date: 2025-07-16 16:50+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
 #: catalog/constants.py:14
 msgid "Maintenance"
 msgstr "Bảo trì"
@@ -46,8 +46,8 @@ msgid ""
 "13-Character <a href=\"https://www.isbn-international.org/content/what-"
 "isbn\">ISBN number</a>"
 msgstr ""
-"Mã số ISBN gồm 13 ký tự "
-"<a href=\"https://www.isbn-international.org/content/what-isbn\">(Tìm hiểu thêm)</a>"
+"Mã số ISBN gồm 13 ký tự <a href=\"https://www.isbn-international.org/content/"
+"what-isbn\">(Tìm hiểu thêm)</a>"
 
 #: catalog/models.py:38
 msgid "Select a genre for this book"
@@ -73,6 +73,57 @@ msgstr "Tất cả sách"
 msgid "All authors"
 msgstr "Tất cả các tác giả"
 
+#: catalog/templates/catalog/book_detail.html:5
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: catalog/templates/catalog/book_detail.html:7
+#, fuzzy
+#| msgid "Authors"
+msgid "Author"
+msgstr "Tác giả"
+
+#: catalog/templates/catalog/book_detail.html:8
+msgid "Summary"
+msgstr "Tóm tắt"
+
+#: catalog/templates/catalog/book_detail.html:9
+msgid "ISBN"
+msgstr "Mã ISBN"
+
+#: catalog/templates/catalog/book_detail.html:10
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: catalog/templates/catalog/book_detail.html:11
+msgid "Genre"
+msgstr "Thể loại"
+
+#: catalog/templates/catalog/book_detail.html:14
+#: catalog/templates/index.html:12
+msgid "Copies"
+msgstr "Bản sao"
+
+#: catalog/templates/catalog/book_detail.html:22
+msgid "Due to be returned"
+msgstr "Hạn trả"
+
+#: catalog/templates/catalog/book_detail.html:24
+msgid "Imprint"
+msgstr "Nhà xuất bản"
+
+#: catalog/templates/catalog/book_detail.html:25
+msgid "ID"
+msgstr "Mã định danh"
+
+#: catalog/templates/catalog/book_list.html:5
+msgid "Book List"
+msgstr "Danh sách sách"
+
+#: catalog/templates/catalog/book_list.html:15
+msgid "There are no books in the library."
+msgstr "Không có sách nào trong thư viện."
+
 #: catalog/templates/index.html:5
 msgid "Local Library Home"
 msgstr "Trang chủ thư viện"
@@ -92,10 +143,6 @@ msgstr "Thư viện có số lượng như sau:"
 #: catalog/templates/index.html:11
 msgid "Books"
 msgstr "Sách"
-
-#: catalog/templates/index.html:12
-msgid "Copies"
-msgstr "Bản sao"
 
 #: catalog/templates/index.html:13
 msgid "Copies available"
