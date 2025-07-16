@@ -11,7 +11,8 @@ from .constants import (
     MAX_LENGTH_IMPRINT,
     MAX_LENGTH_SUMMARY,
     MAX_LENGTH_LOAN_STATUS,
-    LOAN_STATUS
+    LOAN_STATUS,
+    MAX_DISPLAY_GENRES,
 )
 
 # Create your models here.
@@ -43,6 +44,11 @@ class Book(models.Model):
     def get_absolute_url(self):
         """Returns the url to access a detail record for this book."""
         return reverse('book-detail', args=[str(self.id)])
+
+    def display_genre(self):
+        return ', '.join(genre.name for genre in self.genre.all()[:MAX_DISPLAY_GENRES])
+
+    display_genre.short_description = 'Genre'
 
 class BookInstance(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text=_('Unique ID for this particular book across whole library'))

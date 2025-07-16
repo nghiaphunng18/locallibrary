@@ -6,6 +6,9 @@ MAX_LENGTH_SUMMARY = 1000
 MAX_LENGTH_ISBN = 13
 MAX_LENGTH_IMPRINT = 200
 MAX_LENGTH_LOAN_STATUS = 1
+
+MAX_DISPLAY_GENRES = 3
+
 # Loan status choices
 LOAN_STATUS = (
     ('m', _('Maintenance')),
