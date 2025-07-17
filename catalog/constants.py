@@ -10,10 +10,12 @@ MAX_LENGTH_LOAN_STATUS = 1
 MAX_DISPLAY_GENRES = 3
 
 # Loan status choices
-LOAN_STATUS_AVAILABLE = 'a'
 LOAN_STATUS = (
     ('m', _('Maintenance')),
     ('o', _('On loan')),
-    (LOAN_STATUS_AVAILABLE, _('Available')),
+    ('a', _('Available')),
     ('r', _('Reserved')),
 )
+LOAN_STATUS_AVAILABLE = 'a'
+LOAN_STATUS_MAINTENANCE = 'm'
+PAGINATE_BY_DEFAULT = 10
