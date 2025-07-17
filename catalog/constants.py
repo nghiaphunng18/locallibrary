@@ -10,9 +10,10 @@ MAX_LENGTH_LOAN_STATUS = 1
 MAX_DISPLAY_GENRES = 3
 
 # Loan status choices
+LOAN_STATUS_AVAILABLE = 'a'
 LOAN_STATUS = (
     ('m', _('Maintenance')),
     ('o', _('On loan')),
-    ('a', _('Available')),
+    (LOAN_STATUS_AVAILABLE, _('Available')),
     ('r', _('Reserved')),
 )
