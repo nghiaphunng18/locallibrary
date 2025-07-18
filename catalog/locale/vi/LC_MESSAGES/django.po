@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-18 12:37+0700\n"
+"POT-Creation-Date: 2025-07-18 17:04+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,6 +32,22 @@ msgstr "Có sẵn"
 #: catalog/constants.py:17
 msgid "Reserved"
 msgstr "Đã được đặt trước"
+
+#: catalog/forms.py:10 catalog/forms.py:44
+msgid "Enter a date between now and 4 weeks (default 3)."
+msgstr "Nhập ngày trong khoảng từ hôm nay đến 4 tuần sau (mặc định là 3 tuần)."
+
+#: catalog/forms.py:17 catalog/forms.py:31
+msgid "Invalid date - renewal in past"
+msgstr "Ngày không hợp lệ - không thể gia hạn với ngày trong quá khứ"
+
+#: catalog/forms.py:20 catalog/forms.py:35
+msgid "Invalid date - renewal more than 4 weeks ahead"
+msgstr "Ngày không hợp lệ - không thể gia hạn quá 4 tuần kể từ hôm nay"
+
+#: catalog/forms.py:43
+msgid "Renewal date"
+msgstr "Ngày gia hạn"
 
 #: catalog/models.py:25
 msgid "Enter a book genre (e.g.Science Fiction)"
@@ -75,15 +91,37 @@ msgstr "Tất cả các tác giả"
 
 #: catalog/templates/base_generic.html:54
 msgid "My Borrowed"
-msgstr ""
+msgstr "Sách tôi đang mượn"
 
-#: catalog/templates/base_generic.html:55
+#: catalog/templates/base_generic.html:58
 msgid "Logout"
-msgstr ""
+msgstr "Đăng xuất"
 
-#: catalog/templates/base_generic.html:57
+#: catalog/templates/base_generic.html:63
+#: catalog/templates/base_generic.html:65
 msgid "Login"
+msgstr "Đăng nhập"
+
+#: catalog/templates/catalog/author_confirm_delete.html:5
+#, fuzzy
+#| msgid "Authors"
+msgid "Delete Author"
+msgstr "Xoá tác giả"
+
+#: catalog/templates/catalog/author_confirm_delete.html:8
+#, python-format
+msgid ""
+"\n"
+"    Are you sure you want to delete the author: %(author_name)s?\n"
+"    "
 msgstr ""
+"\n"
+"    Bạn có chắc chắn muốn xoá tác giả: %(author_name)s không?\n"
+"    "
+
+#: catalog/templates/catalog/author_confirm_delete.html:15
+msgid "Yes, delete."
+msgstr "Vâng, hãy xoá."
 
 #: catalog/templates/catalog/book_detail.html:5
 msgid "Title"
@@ -135,6 +173,22 @@ msgstr "Danh sách sách"
 #: catalog/templates/catalog/book_list.html:15
 msgid "There are no books in the library."
 msgstr "Không có sách nào trong thư viện."
+
+#: catalog/templates/catalog/book_renew_librarian.html:5
+msgid "Renew"
+msgstr "Gia hạn"
+
+#: catalog/templates/catalog/book_renew_librarian.html:6
+msgid "Borrower"
+msgstr "Người mượn"
+
+#: catalog/templates/catalog/book_renew_librarian.html:8
+msgid "Due date"
+msgstr "Hạn trả"
+
+#: catalog/templates/catalog/book_renew_librarian.html:16
+msgid "Submit"
+msgstr "Gửi"
 
 #: catalog/templates/catalog/bookinstance_list_borrowed_user.html:5
 msgid "Borrowed books"
