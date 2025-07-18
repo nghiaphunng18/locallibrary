@@ -1,11 +1,14 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.views import generic
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from catalog.models import Book, Author, BookInstance, Genre
 from catalog.constants import (
     LOAN_STATUS_AVAILABLE,
     LOAN_STATUS_MAINTENANCE,
     PAGINATE_BY_DEFAULT,
+    LOAN_STATUS_ON_LOAN
 )
 
 
@@ -49,3 +52,15 @@ class BookDetailView(generic.DetailView):
         context['STATUS_AVAILABLE'] = LOAN_STATUS_AVAILABLE
         context['STATUS_MAINTENANCE'] = LOAN_STATUS_MAINTENANCE
         return context
+
+
+class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
+    model = BookInstance
+    template_name = 'catalog/bookinstance_list_borrowed_user.html'
+    paginate_by = PAGINATE_BY_DEFAULT
+
+    def get_queryset(self):
+        return BookInstance.objects.filter(
+            borrower=self.request.user,
+            status=LOAN_STATUS_ON_LOAN
+        ).order_by('due_back')

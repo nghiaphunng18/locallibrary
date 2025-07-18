@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 16:25+0700\n"
+"POT-Creation-Date: 2025-07-18 12:37+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,15 +33,15 @@ msgstr "Có sẵn"
 msgid "Reserved"
 msgstr "Đã được đặt trước"
 
-#: catalog/models.py:22
+#: catalog/models.py:25
 msgid "Enter a book genre (e.g.Science Fiction)"
 msgstr "Nhập thể loại sách (ví dụ: Khoa học viễn tưởng)"
 
-#: catalog/models.py:34
+#: catalog/models.py:38
 msgid "Enter a brief description of the book"
 msgstr "Nhập mô tả ngắn gọn cho cuốn sách"
 
-#: catalog/models.py:36
+#: catalog/models.py:41
 msgid ""
 "13-Character <a href=\"https://www.isbn-international.org/content/what-"
 "isbn\">ISBN number</a>"
@@ -49,15 +49,15 @@ msgstr ""
 "Mã số ISBN gồm 13 ký tự <a href=\"https://www.isbn-international.org/content/"
 "what-isbn\">(Tìm hiểu thêm)</a>"
 
-#: catalog/models.py:38
+#: catalog/models.py:43
 msgid "Select a genre for this book"
 msgstr "Chọn thể loại cho cuốn sách này"
 
-#: catalog/models.py:54
+#: catalog/models.py:61
 msgid "Unique ID for this particular book across whole library"
 msgstr "Mã định danh duy nhất cho sách trong thư viện"
 
-#: catalog/models.py:64
+#: catalog/models.py:71
 msgid "Book availability"
 msgstr "Tình trạng sẵn có của sách"
 
@@ -72,6 +72,18 @@ msgstr "Tất cả sách"
 #: catalog/templates/base_generic.html:24
 msgid "All authors"
 msgstr "Tất cả các tác giả"
+
+#: catalog/templates/base_generic.html:54
+msgid "My Borrowed"
+msgstr ""
+
+#: catalog/templates/base_generic.html:55
+msgid "Logout"
+msgstr ""
+
+#: catalog/templates/base_generic.html:57
+msgid "Login"
+msgstr ""
 
 #: catalog/templates/catalog/book_detail.html:5
 msgid "Title"
@@ -122,6 +134,16 @@ msgstr "Danh sách sách"
 
 #: catalog/templates/catalog/book_list.html:15
 msgid "There are no books in the library."
+msgstr "Không có sách nào trong thư viện."
+
+#: catalog/templates/catalog/bookinstance_list_borrowed_user.html:5
+msgid "Borrowed books"
+msgstr ""
+
+#: catalog/templates/catalog/bookinstance_list_borrowed_user.html:17
+#, fuzzy
+#| msgid "There are no books in the library."
+msgid "There are no books borrowed."
 msgstr "Không có sách nào trong thư viện."
 
 #: catalog/templates/index.html:5
