@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.views import generic
-from django.shortcuts import get_object_or_404
 
 from catalog.models import Book, Author, BookInstance, Genre
 from catalog.constants import (
@@ -18,11 +17,16 @@ def index(request):
 
     num_authors = Author.objects.count()
 
+    # number of visits to this view, as counted in the session variable
+    num_visits = request.session.get('num_visits', 1)
+    request.session['num_visits'] = num_visits + 1
+
     context = {
         'num_books': num_books,
         'num_instances': num_instances,
         'num_instances_available': num_instances_available,
         'num_authors': num_authors,
+        'num_visits': num_visits,
     }
 
     return render(request, 'index.html', context=context)
