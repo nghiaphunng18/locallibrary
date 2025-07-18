@@ -1,3 +1,5 @@
+import datetime
+
 from django.utils.translation import gettext_lazy as _
 
 MAX_LENGTH_TITLE = 200
@@ -20,3 +22,5 @@ LOAN_STATUS_AVAILABLE = 'a'
 LOAN_STATUS_MAINTENANCE = 'm'
 LOAN_STATUS_ON_LOAN = 'o'
 PAGINATE_BY_DEFAULT = 10
+
+DEFAULT_DATE_OF_DEATH = datetime.date(2020, 6, 11)
