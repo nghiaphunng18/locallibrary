@@ -1,0 +1,37 @@
+{% extends "base_generic.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Author List" %}</h1>
+
+{% if author_list %}
+<ul>
+    {% for author in author_list %}
+    <li>
+        <a href="{% url 'author-detail' author.pk %}">
+            {{ author.first_name }} {{ author.last_name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% if is_paginated %}
+<div>
+    {% if page_obj.has_previous %}
+    <a href="?page=1">{% trans "First" %}</a>
+    <a href="?page={{ page_obj.previous_page_number }}">{% trans "Previous" %}</a>
+    {% endif %}
+
+    <span>{% blocktrans %}Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}{% endblocktrans %}</span>
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">{% trans "Next" %}</a>
+    <a href="?page={{ page_obj.paginator.num_pages }}">{% trans "Last" %}</a>
+    {% endif %}
+</div>
+{% endif %}
+
+{% else %}
+<p>{% trans "No authors found." %}</p>
+{% endif %}
+{% endblock %}
