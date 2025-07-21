@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Author Detail" %}</h1>
+
+<p><strong>{% trans "Name" %}:</strong> {{ author.first_name }} {{ author.last_name }}</p>
+<p><strong>{% trans "Date of birth" %}:</strong> {{ author.date_of_birth }}</p>
+<p><strong>{% trans "Date of death" %}:</strong> {{ author.date_of_death }}</p>
+
+<a href="{% url 'authors' %}">{% trans "Back to list" %}</a>
+{% endblock %}

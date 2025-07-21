@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-18 17:04+0700\n"
+"POT-Creation-Date: 2025-07-21 20:46+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: catalog/constants.py:14
+#: catalog/constants.py:16
 msgid "Maintenance"
 msgstr "Bảo trì"
 
-#: catalog/constants.py:15
+#: catalog/constants.py:17
 msgid "On loan"
 msgstr "Đang được mượn"
 
-#: catalog/constants.py:16
+#: catalog/constants.py:18
 msgid "Available"
 msgstr "Có sẵn"
 
-#: catalog/constants.py:17
+#: catalog/constants.py:19
 msgid "Reserved"
 msgstr "Đã được đặt trước"
 
@@ -123,6 +123,59 @@ msgstr ""
 msgid "Yes, delete."
 msgstr "Vâng, hãy xoá."
 
+#: catalog/templates/catalog/author_detail.html:5
+#, fuzzy
+#| msgid "Authors"
+msgid "Author Detail"
+msgstr "Tác giả"
+
+#: catalog/templates/catalog/author_detail.html:7
+msgid "Name"
+msgstr "Tên"
+
+#: catalog/templates/catalog/author_detail.html:8
+msgid "Date of birth"
+msgstr "Ngày sinh"
+
+#: catalog/templates/catalog/author_detail.html:9
+msgid "Date of death"
+msgstr "Ngày mất"
+
+#: catalog/templates/catalog/author_detail.html:11
+msgid "Back to list"
+msgstr "Quay lại danh sách"
+
+#: catalog/templates/catalog/author_list.html:5
+#, fuzzy
+#| msgid "Authors"
+msgid "Author List"
+msgstr "Tác giả"
+
+#: catalog/templates/catalog/author_list.html:21
+msgid "First"
+msgstr "Đầu tiên"
+
+#: catalog/templates/catalog/author_list.html:22
+msgid "Previous"
+msgstr "Trước"
+
+#: catalog/templates/catalog/author_list.html:25
+#, python-format
+msgid "Page %(page_obj.number)s of %(page_obj.paginator.num_pages)s"
+msgstr "Trang %(page_number)s trên tổng số %(total_pages)s"
+
+#: catalog/templates/catalog/author_list.html:28
+msgid "Next"
+msgstr "Tiếp"
+
+#: catalog/templates/catalog/author_list.html:29
+msgid "Last"
+msgstr "Cuối cùng"
+
+#: catalog/templates/catalog/author_list.html:35
+msgid "No authors found."
+msgstr "Không tìm thấy tác giả nào."
+
 #: catalog/templates/catalog/book_detail.html:5
 msgid "Title"
 msgstr "Tiêu đề"
@@ -192,7 +245,7 @@ msgstr "Gửi"
 
 #: catalog/templates/catalog/bookinstance_list_borrowed_user.html:5
 msgid "Borrowed books"
-msgstr ""
+msgstr "Sách đang mượn"
 
 #: catalog/templates/catalog/bookinstance_list_borrowed_user.html:17
 #, fuzzy
