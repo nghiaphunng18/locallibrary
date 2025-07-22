@@ -124,10 +124,8 @@ msgid "Yes, delete."
 msgstr "Vâng, hãy xoá."
 
 #: catalog/templates/catalog/author_detail.html:5
-#, fuzzy
-#| msgid "Authors"
 msgid "Author Detail"
-msgstr "Tác giả"
+msgstr "Thông tin tác giả"
 
 #: catalog/templates/catalog/author_detail.html:7
 msgid "Name"
@@ -146,10 +144,8 @@ msgid "Back to list"
 msgstr "Quay lại danh sách"
 
 #: catalog/templates/catalog/author_list.html:5
-#, fuzzy
-#| msgid "Authors"
 msgid "Author List"
-msgstr "Tác giả"
+msgstr "Danh sách tác giả"
 
 #: catalog/templates/catalog/author_list.html:21
 msgid "First"
@@ -162,7 +158,7 @@ msgstr "Trước"
 #: catalog/templates/catalog/author_list.html:25
 #, python-format
 msgid "Page %(page_obj.number)s of %(page_obj.paginator.num_pages)s"
-msgstr "Trang %(page_number)s trên tổng số %(total_pages)s"
+msgstr "Trang %(page_obj.number)s trên tổng số %(page_obj.paginator.num_pages)s"
 
 #: catalog/templates/catalog/author_list.html:28
 msgid "Next"
@@ -181,8 +177,6 @@ msgid "Title"
 msgstr "Tiêu đề"
 
 #: catalog/templates/catalog/book_detail.html:7
-#, fuzzy
-#| msgid "Authors"
 msgid "Author"
 msgstr "Tác giả"
 
